@@ -320,7 +320,8 @@ void Pipsolar::handle_poll_response_(ENUMPollingCommand polling_command, const c
 }
 void Pipsolar::handle_poll_error_(ENUMPollingCommand polling_command) {
   // handlers are designed in a way that an empty message sets all sensors to unknown
-  this->handle_poll_response_(polling_command, "");
+  // ignore error for testing
+  // this->handle_poll_response_(polling_command, "");
 }
 
 void Pipsolar::handle_qpiri_(const char *message) {
